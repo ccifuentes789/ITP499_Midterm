@@ -15,3 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/yelp/yelp', 'YelpController@search');
+Route::get('/yelp', 'YelpController@listReviews');
