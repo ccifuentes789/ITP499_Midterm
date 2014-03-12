@@ -7,6 +7,7 @@
 
 	<?php foreach($yelps as $yelp) :?>
 		<?php $fbID = $yelp->facebook_page;
+		$id = $yelp->id;
 
 
 		?>
@@ -20,7 +21,7 @@
 				<p>FaceBook Page:<a href="http://facebook.com/<?php echo $fbID?>"> here </a> </p>
 			<?php }?>
 
-			<p><a href="yelpReviews"> View Reviews</a> </p>
+			<p><a href=""> View Reviews</a> </p>
 
 			<hr/>
 

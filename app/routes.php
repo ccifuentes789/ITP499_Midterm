@@ -10,12 +10,24 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+/*
 Route::get('/', function()
 {
 	return View::make('hello');
-});
+});*/
 
-//Route::get('/yelp/yelp', 'YelpController@search');
-Route::get('/yelp', 'YelpController@listReviews');
-Route::get('/yelp', 'YelpController@listReviews');
+/*
+Route::get('/yelp/{id}', function($id){
+	$reviews = Yelp::reviews($id);
+	dd($reviews->rating->toArray());
+
+
+});*/
+
+Route::get('/', 'YelpController@listReviews');
+Route::get('yelp/{id}', function($id){
+
+	$id = 1;
+	$reviews = Yelp::reviews($id);
+	
+});
