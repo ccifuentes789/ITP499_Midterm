@@ -8,7 +8,11 @@
 	<?php foreach($reviews as $review) :?>
 	
 		<div id="review">
-			<p><b><?php echo $review->rating; ?> </b> </p>
+			
+			
+			<p> <?php for($i=0,$i<$review->rating, $i++){
+				echo '*';
+			} ?></p>
 			<p> <?php echo $review->review_description;?> </p>
 
 
